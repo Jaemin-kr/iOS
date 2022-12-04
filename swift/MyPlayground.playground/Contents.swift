@@ -38,3 +38,36 @@ num_var = 25
 print("\(num_var)")
 print("\(sum)")
 
+var someBool : Bool = true
+someBool = false
+print("\(someBool)")
+
+//swift dictionary
+
+//var languages = ["Swift", "Objective-C", "Pthon"]
+//var capitals = [
+//    "한국": "서울",
+//    "일본": "도쿄",
+//    "중국": "베이징",
+//]
+//
+//languages[0]
+//languages[1] = "Ruby"
+//
+//capitals["한국"]
+//capitals["프랑스"] = "파리"
+
+var languages: [String] = ["Swift", "Objective-C", "Pthon"]
+var capitals: [String: String] = [
+    "한국": "서울",
+    "일본": "도쿄",
+    "중국": "베이징",
+]
+
+//빈 배열 선언
+var language_arr: [String] = []
+var capital_city: [String: String] = [:]
+
+//다른표현, 생성자 사용
+var language_arr1 = [String]()
+var cities = [String:String]()
