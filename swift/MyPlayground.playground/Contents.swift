@@ -129,3 +129,81 @@ age = 99
 job = "iOS Programmer"
 
 print("저의 이름은 \(name)이고, 나이는 \(age)세며, 직업은 \(job)입니다. 비밀이지만, 키는 \(height)cm 입니다.")
+
+//Array, Dictionary and Set
+var integers: Array<Int> = Array<Int>()
+// 위와 동일한 표현
+// var integers: Array<Int> = [Int]()
+// var integers: Array<Int> = []
+// var integers: [Int] = Array<Int>()
+// var integers: [Int] = [Int]()
+// var integers: [Int] = []
+// var integers = [Int]()
+integers.append(1)
+integers.append(100)
+print(integers)
+
+integers[0] = 25
+print(integers)
+
+integers.remove(at: 0) //integers[0] delete
+integers.removeLast() //delete last index
+print(integers)
+integers.removeAll()
+
+print(integers.count) //count integers
+
+let immutableArray = [1, 2, 3, 5]
+//수정 불가능한 Array
+
+//key가 String, value가 Any인 Dictionary생성
+var anyDictionary: Dictionary<String, Any> = [String: Any]()
+anyDictionary["someKey"] = "value"
+anyDictionary["anotherKey"] = 100
+
+
+anyDictionary["someKey"] = "dictionary"
+anyDictionary.removeValue(forKey:"anotherKey")
+print(anyDictionary)
+anyDictionary["someKey"] = nil
+print(anyDictionary)
+
+// 3. 불변 Dictionary: let을 사용하여 Dictionary 선언
+let emptyDictionary: [String: String] = [:]
+let initalizedDictionary: [String: String] = ["name": "yagom", "gender": "male"]
+
+//Set 생성 및 선언
+var integerSet: Set<Int> = Set<Int>()
+
+integerSet.insert(1)
+integerSet.insert(99)
+integerSet.insert(199)
+integerSet.insert(99)
+integerSet.insert(100)
+
+print(integerSet)
+
+print(integerSet.contains(1)) // true
+print(integerSet.contains(2)) // false
+
+integerSet.remove(199)
+integerSet.removeFirst()
+
+integerSet.count
+
+//Set의 활용
+let setA: Set<Int> = [1, 2, 3, 4, 5]
+let setB: Set<Int> = [3, 4, 5, 6, 7]
+
+let union: Set<Int> = setA.union(setB)
+print(union)
+
+let sortedUnion: [Int] = union.sorted()
+print(sortedUnion)
+
+let intersection: Set<Int> = setA.intersection(setB)
+print(intersection)
+
+let subtraction: Set<Int> = setA.subtracting(setB)
+print(subtraction)
+
