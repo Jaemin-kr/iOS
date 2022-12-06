@@ -207,3 +207,56 @@ print(intersection)
 let subtraction: Set<Int> = setA.subtracting(setB)
 print(subtraction)
 
+//Struct and Class p190
+struct BasicInfo{
+    let name: String
+    var age: Int
+}
+
+var jaeminInfo: BasicInfo = BasicInfo(name: "jaemin", age: 25)
+jaeminInfo.age = 50
+
+var friendInfo: BasicInfo = jaeminInfo
+
+print("jaemin's age: \(jaemin.age)")
+print("friend's age: \(friendInfo.age)")
+
+friendInfo.age = 100
+
+print("jaemin's age: \(jaemin.age)")
+print("friend's age: \(friendInfo.age)")
+
+class People{
+    var height: Float = 0.0
+    var weight: Float = 0.0
+}
+
+var jaemin1: People = People()
+var friend: People = jaemin1
+
+print("jaemin's height: \(jaemin1.height)")
+print("friend's height: \(friend.height)")
+
+friend.height = 1000
+
+print("jaemin's height: \(jaemin1.height)")
+print("friend's height: \(friend.height)")
+//jaemin1과 friend가 같은 height를 참조함을 알 수 있다
+
+func changeBasicInfo(_ info: BasicInfo){
+    var copiedInfo: BasicInfo = info
+    copiedInfo.age = 1
+}
+
+func changePersonInfo(_ info: People){
+    info.height = 168.5
+}
+
+changeBasicInfo(jaeminInfo)
+print("jaemin's age: \(jaeminInfo.age)")
+
+changePersonInfo(jaemin1)
+print("jaemin's height: \(jaemin1.height)")
+
+
+
