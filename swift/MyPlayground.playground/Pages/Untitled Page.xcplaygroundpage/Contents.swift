@@ -13,7 +13,7 @@ class Person{
     var name: String = "Jaemin"
     var age: Int = 10
 }
-
+/*
 let jaemin: Person = Person()
 
 print(jaemin)
@@ -258,5 +258,28 @@ print("jaemin's age: \(jaeminInfo.age)")
 changePersonInfo(jaemin1)
 print("jaemin's height: \(jaemin1.height)")
 
+*/
 
+var integer: Int = -100
+let unsignedInteger: UInt = 50
+print("integer 값: \(integer), unsignedInteger 값: \(unsignedInteger)")
+print("Int 최댓값: \(Int.max), Int 최솟값 \(Int.min)")
+print("Uint 최댓값: \(UInt.max), Uint 최솟값 \(UInt.min)")
+
+let largeInteger: Int64 = Int64.max
+
+let smallUnsignedInteger: UInt8 = UInt8.max
+print("Int64 최댓값: \(largeInteger), UInt 최대값: \(smallUnsignedInteger)")
+
+//let tooLarge: Int = Int.max + 1
+//let cannotBeNegative: UInt = -5
+
+//integer = unsignedInteger
+integer = Int(unsignedInteger)
+
+//진수별 정수 표현방법
+let decimalInteger: Int = 28
+let binaryInteget: Int = 0b11100
+let octalInteger: Int = 0o34
+let hexadecimalInteger: Int = 0x1C
 
