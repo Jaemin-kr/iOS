@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isOpen: Bool = false
-    
+
     var body: some View {
         VStack {
 //            Text("잠겨있습니다")
@@ -20,11 +20,9 @@ struct ContentView: View {
 //                .foregroundColor(.blue)
 //            Image(systemName: "lock")
 //               // .resizable()
-//
+
+
             if isOpen{
-//                AsyncImage(url: URL(string: "https://en.wikipedia.org/wiki/Puppy#/media/File:St._Bernard_puppy.jpg"))
-//                    .scaledToFit()
-//                    .frame(width: 100, height: 100)
                 Text("열려있습니다")
                     .font(.title)
                     .italic()
@@ -33,7 +31,7 @@ struct ContentView: View {
                 Image(systemName: "lock.open")
                     .resizable()
                     .frame(width: 25, height: 25, alignment: .bottom)
-    
+
                 Button("잠그기") {
                     //Image(systemName: "lock")
                     isOpen = false
@@ -51,7 +49,7 @@ struct ContentView: View {
                     isOpen = true
                 }
             }
-            
+
         }
         .padding()
         
